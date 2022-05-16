@@ -26,10 +26,11 @@ mv composer.phar /usr/local/bin/composer
 
 echo -e "${YELLOW}Install nodejs${CLEAR}"
 apt install nodejs -y
-npm install -g npm@latest
+node -v
 
-echo -e "${YELLOW}Install nvm ${CLEAR}"
+echo -e "${YELLOW}Install nvm${CLEAR}"
 node install nvm -y
+npm -v
 
 echo -e "${YELLOW}clone Project${CLEAR}"
 echo -e "${YELLOW}Laravel${CLEAR}"
