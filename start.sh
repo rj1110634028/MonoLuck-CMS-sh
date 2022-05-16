@@ -23,14 +23,17 @@ echo -e "${YELLOW}Install composer${CLEAR}"
 cd /tmp
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+composer update
 
 echo -e "${YELLOW}Install nodejs${CLEAR}"
 apt install nodejs -y
-node -v
+
+echo -e "${YELLOW}Install npm${CLEAR}"
+sudo apt-get install npm
+npm install -g npm@latest
 
 echo -e "${YELLOW}Install nvm${CLEAR}"
 node install nvm -y
-npm -v
 
 echo -e "${YELLOW}clone Project${CLEAR}"
 echo -e "${YELLOW}Laravel${CLEAR}"
