@@ -38,6 +38,7 @@ git clone https://github.com/rj1110634028/MonoLuck-CMS-Back.git
 cd ./MonoLuck-CMS-Back
 git checkout -b release
 git pull origin release
+sudo apt install php-xml
 composer install
 composer update
 
