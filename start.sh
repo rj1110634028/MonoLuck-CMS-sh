@@ -41,8 +41,8 @@ git clone https://github.com/rj1110634028/MonoLuck-CMS-Back.git
 cd ./MonoLuck-CMS-Back
 git checkout -b release
 git pull origin release
-composer update
 composer install
+composer update
 
 echo -e "${YELLOW}React${CLEAR}"
 cd /home
