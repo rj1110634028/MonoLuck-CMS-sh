@@ -28,7 +28,7 @@ echo -e "${YELLOW}Install nodejs${CLEAR}"
 apt install nodejs -y
 
 echo -e "${YELLOW}Install npm${CLEAR}"
-apt-get install npm
+apt-get install npm -y
 npm install -g npm@latest
 
 echo -e "${YELLOW}Install nvm${CLEAR}"
