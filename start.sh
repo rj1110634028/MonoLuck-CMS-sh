@@ -28,7 +28,7 @@ echo -e "${YELLOW}Install nodejs${CLEAR}"
 apt install nodejs -y
 npm install -g npm@latest
 
-echo -e "${YELLOW}Install nvm${CLEAR}"
+echo -e "${YELLOW}Install nvm ${CLEAR}"
 node install nvm -y
 
 echo -e "${YELLOW}clone Project${CLEAR}"
