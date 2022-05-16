@@ -31,9 +31,6 @@ echo -e "${YELLOW}Install npm${CLEAR}"
 apt-get install npm -y
 npm install -g npm@latest
 
-echo -e "${YELLOW}Install nvm${CLEAR}"
-node install nvm -y
-
 echo -e "${YELLOW}clone Project${CLEAR}"
 echo -e "${YELLOW}Laravel${CLEAR}"
 cd /home
