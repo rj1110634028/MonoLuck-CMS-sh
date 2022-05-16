@@ -1,33 +1,38 @@
+
+Green='\033[32m'  # Green
+YELLOW='\033[33m' # YELLOW
+CLEAR='\033[0m'   # Clear color and formatting
+
 apt-get update
 
-echo -e "Install git"
+echo -e "${YELLOW}Install git${CLEAR}"
 apt-get install -y git
 
-echo -e "Install mysql"
+echo -e "${YELLOW}Install mysql${CLEAR}"
 apt-get install -y mysql-server
-mysql --skip-column-names -B -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';"
-mysql -B -e "CREATE DATABASE 'locker_cms';"
+mysql --skip-column-names -B -e "${YELLOW}ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';${CLEAR}"
+mysql -B -e "${YELLOW}CREATE DATABASE 'locker_cms';${CLEAR}"
 
-echo -e "Install php"
+echo -e "${YELLOW}Install php${CLEAR}"
 apt-get install -y php libapache2-mod-php php-mysql
 
-echo -e "Install composer"
+echo -e "${YELLOW}Install composer${CLEAR}"
 cd /tmp
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-echo -e "Install nodejs"
+echo -e "${YELLOW}Install nodejs${CLEAR}"
 apt-get install nodejs -y
 npm install -g npm@latest
 
-echo -e "clone Project"
-echo -e "Laravel"
+echo -e "${YELLOW}clone Project${CLEAR}"
+echo -e "${YELLOW}Laravel${CLEAR}"
 cd /home
 git clone https://github.com/rj1110634028/MonoLuck-CMS-Back.git
 cd ./MonoLuck-CMS-Back
 composer install
 
-echo -e "React"
+echo -e "${YELLOW}React${CLEAR}"
 cd /home
 git clone https://github.com/leonnn124/luck-cms.git
 cd ./luck-cms
