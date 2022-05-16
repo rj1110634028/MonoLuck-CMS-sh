@@ -3,18 +3,21 @@ Green='\033[32m'  # Green
 YELLOW='\033[33m' # YELLOW
 CLEAR='\033[0m'   # Clear color and formatting
 
-apt-get update
+apt update
 
 echo -e "${YELLOW}Install git${CLEAR}"
-apt-get install -y git
+apt install -y git
 
 echo -e "${YELLOW}Install mysql${CLEAR}"
-apt-get install -y mysql-server
+apt install -y mysql-server
 mysql --skip-column-names -B -e "${YELLOW}ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';${CLEAR}"
 mysql -B -e "${YELLOW}CREATE DATABASE 'locker_cms';${CLEAR}"
 
 echo -e "${YELLOW}Install php${CLEAR}"
-apt-get install -y php libapache2-mod-php php-mysql
+apt install -y php libapache2-mod-php php-mysql
+
+echo -e "${YELLOW}Install curl${CLEAR}"
+apt install curl
 
 echo -e "${YELLOW}Install composer${CLEAR}"
 cd /tmp
@@ -22,7 +25,7 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 echo -e "${YELLOW}Install nodejs${CLEAR}"
-apt-get install nodejs -y
+apt install nodejs -y
 npm install -g npm@latest
 
 echo -e "${YELLOW}clone Project${CLEAR}"
