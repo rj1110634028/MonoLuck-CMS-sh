@@ -23,13 +23,12 @@ echo -e "${YELLOW}Install composer${CLEAR}"
 cd /tmp
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
-composer update
 
 echo -e "${YELLOW}Install nodejs${CLEAR}"
 apt install nodejs -y
 
 echo -e "${YELLOW}Install npm${CLEAR}"
-sudo apt-get install npm
+apt-get install npm
 npm install -g npm@latest
 
 echo -e "${YELLOW}Install nvm${CLEAR}"
@@ -42,6 +41,7 @@ git clone https://github.com/rj1110634028/MonoLuck-CMS-Back.git
 cd ./MonoLuck-CMS-Back
 git checkout -b release
 git pull origin release
+composer update
 composer install
 
 echo -e "${YELLOW}React${CLEAR}"
