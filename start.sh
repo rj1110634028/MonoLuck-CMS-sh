@@ -37,6 +37,8 @@ echo -e "${YELLOW}Laravel${CLEAR}"
 cd /home
 git clone https://github.com/rj1110634028/MonoLuck-CMS-Back.git
 cd ./MonoLuck-CMS-Back
+git checkout -b release
+git pull origin release
 composer install
 
 echo -e "${YELLOW}React${CLEAR}"
