@@ -14,7 +14,7 @@ mysql --skip-column-names -B -e "${YELLOW}ALTER USER 'root'@'localhost' IDENTIFI
 mysql -B -e "${YELLOW}CREATE DATABASE 'locker_cms';${CLEAR}"
 
 echo -e "${YELLOW}Install php${CLEAR}"
-apt install -y php libapache2-mod-php php-mysql
+apt install -y php8.1 libapache2-mod-php8.1 php8.1-mysql
 
 echo -e "${YELLOW}Install curl${CLEAR}"
 apt install curl
