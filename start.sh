@@ -39,7 +39,7 @@ cd ./MonoLuck-CMS-Back
 git checkout -b release
 git pull origin release
 sudo apt install php-xml
-composer install
+composer install --ignore-platform-reqs
 composer update
 
 echo -e "${YELLOW}React${CLEAR}"
