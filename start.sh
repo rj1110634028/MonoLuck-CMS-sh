@@ -10,8 +10,9 @@ apt install -y git
 
 echo -e "${YELLOW}Install mysql${CLEAR}"
 apt install -y mysql-server
-mysql --skip-column-names -B -e "${YELLOW}ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';${CLEAR}"
-mysql -B -e "${YELLOW}CREATE DATABASE 'locker_cms';${CLEAR}"
+service mysql start
+mysql --skip-column-names -B -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';"
+mysql -uroot -ptoor -B -e "CREATE DATABASE 'locker_cms';"
 
 echo -e "${YELLOW}Install php${CLEAR}"
 apt install -y php8.1 libapache2-mod-php8.1 php8.1-mysql
