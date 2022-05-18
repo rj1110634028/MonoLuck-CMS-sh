@@ -12,7 +12,7 @@ echo -e "${YELLOW}Install mysql${CLEAR}"
 apt install -y mysql-server
 service mysql start
 mysql --skip-column-names -B -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'toor';"
-mysql -uroot -ptoor -B -e "CREATE DATABASE 'locker_cms';"
+mysql -uroot -ptoor -B -e "CREATE DATABASE locker_cms;"
 
 echo -e "${YELLOW}Install php${CLEAR}"
 apt install -y php8.1 libapache2-mod-php8.1 php8.1-mysql
@@ -39,7 +39,7 @@ git clone https://github.com/rj1110634028/MonoLuck-CMS-Back.git
 cd ./MonoLuck-CMS-Back
 git checkout -b release
 git pull origin release
-sudo apt install php-xml
+apt install php-xml
 composer install --ignore-platform-reqs
 composer update
 
