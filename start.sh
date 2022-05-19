@@ -15,10 +15,10 @@ mysql --skip-column-names -B -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH m
 mysql -uroot -ptoor -B -e "CREATE DATABASE locker_cms;"
 
 echo -e "${YELLOW}Install php${CLEAR}"
-apt install -y php8.1 libapache2-mod-php8.1 php8.1-mysql
+apt install -y php libapache2-mod-php php-mysql
 
 echo -e "${YELLOW}Install curl${CLEAR}"
-apt install curl
+apt install curl -y
 
 echo -e "${YELLOW}Install composer${CLEAR}"
 cd /tmp
