@@ -15,8 +15,8 @@ mysql --skip-column-names -B -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH m
 mysql -uroot -ptoor -B -e "CREATE DATABASE locker_cms;"
 
 echo -e "${YELLOW}Install php${CLEAR}"
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:ondrej/php
+apt install software-properties-common -y
+add-apt-repository ppa:ondrej/php
 apt install -y php8.1 libapache2-mod-php8.1 php8.1-mysql php8.1-curl php8.1-xml
 
 echo -e "${YELLOW}Install curl${CLEAR}"
@@ -28,7 +28,7 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 echo -e "${YELLOW}Install nodejs${CLEAR}"
-curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_17.x | -E bash -
 apt install nodejs -y
 
 echo -e "${YELLOW}Install npm${CLEAR}"
