@@ -28,7 +28,7 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 echo -e "${YELLOW}Install nodejs${CLEAR}"
-curl -fsSL https://deb.nodesource.com/setup_17.x | -E bash -
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 apt install nodejs -y
 
 echo -e "${YELLOW}Install npm${CLEAR}"
@@ -36,7 +36,7 @@ apt-get install npm -y
 npm install -g npm@latest
 
 echo -e "${YELLOW}Install mqtt${CLEAR}"
-apt install mosquitto mosquitto-clients
+apt install mosquitto mosquitto-clients -y
 
 echo -e "${YELLOW}clone Project${CLEAR}"
 echo -e "${YELLOW}Laravel${CLEAR}"
